@@ -11,7 +11,7 @@ import { onAuthStateChanged, signInWithPopup, GoogleAuthProvider, signOut, User 
 import { doc, getDoc, setDoc, onSnapshot, getDocFromServer } from 'firebase/firestore';
 import { handleFirestoreError, OperationType } from './services/errorHandlers';
 
-const DEFAULT_LOCALE: Locale = 'pt-BR';
+const DEFAULT_LOCALE: Locale = 'pt-BR'; 
 
 const UI_TEXTS = {
   'en-US': {
