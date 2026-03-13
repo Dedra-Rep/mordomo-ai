@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1a0621;
+  color: #f3f4f6;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.acai-gradient {
+  background: linear-gradient(135deg, #2e0854 0%, #4b0082 100%);
+}

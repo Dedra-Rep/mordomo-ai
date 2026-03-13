@@ -1,0 +1,29 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Stores affiliate profile information and Amazon IDs.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "email": { "type": "string", "format": "email" },
+        "amazonIdBR": { "type": "string", "description": "Amazon Associate ID for Brazil" },
+        "amazonIdUS": { "type": "string", "description": "Amazon Associate ID for USA" },
+        "subscriptionLevel": { 
+          "type": "string", 
+          "enum": ["free", "standard", "elite"],
+          "description": "free: trial, standard: $20, elite: $50" 
+        },
+        "stripeCustomerId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "email", "subscriptionLevel"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "UserProfile",
+      "description": "User profile documents indexed by UID."
+    }
+  }
+}
